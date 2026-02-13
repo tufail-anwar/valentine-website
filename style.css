@@ -120,58 +120,41 @@ body {
 }
 
 /*letter*/
-/* popup container */
+/* popup overlay */
 .js-letter--container {
   position: fixed;
   inset: 0;
+
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+
+  padding: 16px;
+  overflow-y: auto;
 
   opacity: 0;
   pointer-events: none;
-  transition: 0.4s ease;
-  z-index: 1000;
 }
 
-/* when JS adds show */
 .js-letter--container.show {
   opacity: 1;
   pointer-events: auto;
 }
 
-/* actual letter card */
-/* popup container */
-.inner-box {
-  position: fixed;
-  inset: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  opacity: 0;
-  pointer-events: none;
-  transition: 0.4s ease;
-  z-index: 1000;
-}
-
-.inner-box.show {
-  opacity: 1;
-  pointer-events: auto;
-}
 
 /* letter card */
 .js-box {
-  width: auto;              
-  max-width: 80vw;        
-  min-width: 280px;    
-
+  width: 100%;
+  max-width: 420px;  
+  
   background: #ffcbd2;
-  padding: 25px;
+  padding: 20px;
   border-radius: 18px;
 
+  line-height: 1.6;
+  font-size: 1rem;
+
   box-shadow: 0 12px 25px rgba(0,0,0,0.25);
-  height: auto;
 }
 
 
@@ -311,7 +294,8 @@ body {
     margin-left: 10px;
     & p{
     font-size: 19px;
-    font-weight: 400;
+    font-weight: 350;
+    line-height: 1;
     
     }
   }
